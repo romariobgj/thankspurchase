@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '915352790808162');
+        fbq('track', 'PageView');
+        fbq('track', 'Purchase', {
+          value: 119.40, 
+          currency: 'GBP'  // Alterado para Libra Esterlina
+        });
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=915352790808162&ev=PageView&noscript=1"
+        /></noscript>
+         <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1380431939627169');
+        fbq('track', 'PageView');
+        fbq('track', 'Purchase', {
+          value: 119.40, 
+          currency: 'GBP'
+        });
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1380431939627169&ev=PageView&noscript=1"
+    /></noscript>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            text-align: center;
+            color: #FFD700;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2);
+        }
+        h1 {
+            color: #FFD700;
+            margin-top: 0; /* Ajustado para ocupar o espaço da logo removida */
+        }
+        .ticket-box {
+            background: #222;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(255, 215, 0, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .ticket {
+            background: #FFD700;
+            color: #000;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            background: #111;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Thank You!</h1>
+        <div class="ticket-box" id="numbers"></div>
+    </div>
+    <footer>
+        © 2025 All Rights Reserved. 
+    </footer>
+
+    <script>
+        function getOrGenerateNumbers() {
+            let storedNumbers = localStorage.getItem("userNumbers");
+            if (storedNumbers) {
+                let parsedNumbers = JSON.parse(storedNumbers);
+                if (parsedNumbers.length === 180) {  // Alterado de 40 para 180
+                    return parsedNumbers;
+                }
+            }
+            let numbers = new Set();
+            while (numbers.size < 180) {  // Alterado de 40 para 180
+                numbers.add(Math.floor(Math.random() * 999999) + 1);
+            }
+            let numbersArray = Array.from(numbers);
+            localStorage.setItem("userNumbers", JSON.stringify(numbersArray));
+            return numbersArray;
+        }
+
+        function displayNumbers() {
+            const numbers = getOrGenerateNumbers();
+            const container = document.getElementById("numbers");
+            container.innerHTML = "";
+            numbers.forEach(num => {
+                let div = document.createElement("div");
+                div.classList.add("ticket");
+                div.textContent = num;
+                container.appendChild(div);
+            });
+        }
+
+        displayNumbers();
+    </script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92d13b37fd7353ed',t:'MTc0NDEwOTcxNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>
