@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Event snippet for Compra conversion page -->
-<script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17323395448/HwdlCMCi-esaEPiSuMRA',
-      'value': 1.0,
-      'currency': 'USD',
-      'transaction_id': ''
-  });
-</script>
-    <!-- Event snippet for Compra conversion page -->
-<script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17323309015/YfemCM-q6usaENfvssRA',
-      'value': 1.0,
-      'currency': 'BRL',
-      'transaction_id': ''
-  });
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Global site tag (gtag.js) - Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17323395448"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // Inicializar ambas as contas
+      gtag('config', 'AW-17323395448');
+      gtag('config', 'AW-17323309015');
+    </script>
+
+    <!-- Evento de conversão 1 -->
+    <script>
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17323395448/HwdlCMCi-esaEPiSuMRA',
+          'value': 1.0,
+          'currency': 'USD'
+      });
+    </script>
+
+    <!-- Evento de conversão 2 -->
+    <script>
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17323309015/YfemCM-q6usaENfvssRA',
+          'value': 1.0,
+          'currency': 'BRL'
+      });
+    </script>
+
     <!-- Meta Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -35,12 +46,18 @@
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '1219049859999460');
-        fbq('track', 'Purchase', {value: '0.00', currency: 'USD'}); // Evento de compra com valor placeholder
+        fbq('track', 'Purchase', {value: '0.00', currency: 'USD'});
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1219049859999460&ev=Purchase&noscript=1"
-    /></noscript>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1219049859999460&ev=Purchase&noscript=1"/>
+    </noscript>
     <!-- End Meta Pixel Code -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         body {
             background-color: #000000;
